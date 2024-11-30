@@ -1,0 +1,54 @@
+const Sequeliza = require("sequelize");
+const sequelize = require("../config/database");
+
+
+const VenueType = require("./venueType.model")(sequelize, Sequeliza);
+const Venue = require("./venue.model")(sequelize, Sequeliza);
+const VenuePhoto = require("./venuePhoto.model")(sequelize, Sequeliza);
+const Region = require("./region.model")(sequelize, Sequeliza);
+const District = require("./district.model")(sequelize, Sequeliza);
+const Discount = require("./discount.model")(sequelize, Sequeliza);
+const Admin = require("./admin.model")(sequelize, Sequeliza);
+const Country = require("./country.model")(sequelize, Sequeliza);
+const Delivery = require("./delivery.model")(sequelize, Sequeliza);
+const SeatType = require("./seatType.model")(sequelize, Sequeliza);
+const Seat = require("./seat.model")(sequelize, Sequeliza);
+const HumanCategory = require("./humanCategory.model")(sequelize, Sequeliza);
+const EventType = require("./eventType.model")(sequelize, Sequeliza);
+const Event = require("./event.model")(sequelize, Sequeliza);
+const Language = require("./language.model")(sequelize, Sequeliza);
+const Status = require("./status.model")(sequelize, Sequeliza);
+const TicketType = require("./ticketType.model")(sequelize, Sequeliza);
+const Ticket = require("./ticket.model")(sequelize, Sequeliza);
+const FlatDto = require("./flatdto.model")(sequelize, Sequeliza);
+const SectorDto = require("./sectordto.model")(sequelize, Sequeliza);
+const Payment = require("./payment.model")(sequelize, Sequeliza);
+const Gender = require("./gender.model")(sequelize, Sequeliza);
+const Customer = require("./customer.model")(sequelize, Sequeliza);
+const CustomerAddress = require("./customerAddress.model")(sequelize, Sequeliza);
+const CustomerCard = require("./customerCard.model")(sequelize, Sequeliza);
+const Booking = require("./booking.model")(sequelize, Sequeliza);
+const   Cart = require("./cart.model")(sequelize, Sequeliza);
+
+VenueType.associate(sequelize.models);
+Venue.associate(sequelize.models);
+VenuePhoto.associate(sequelize.models);
+Region.associate(sequelize.models);
+District.associate(sequelize.models);
+Discount.associate(sequelize.models);
+SeatType.associate(sequelize.models);
+Seat.associate(sequelize.models);
+HumanCategory.associate(sequelize.models);
+EventType.associate(sequelize.models);
+Event.associate(sequelize.models);
+Language.associate(sequelize.models);
+Status.associate(sequelize.models);
+TicketType.associate(sequelize.models);
+Ticket.associate(sequelize.models);
+Customer.associate(sequelize.models);
+CustomerAddress.associate(sequelize.models);
+CustomerCard.associate(sequelize.models);
+Booking.associate(sequelize.models);
+Cart.associate(sequelize.models);
+
+module.exports = { VenueType, Venue, VenuePhoto, Region, District, Admin, Country, Delivery, Discount, SeatType, Seat, HumanCategory, EventType, Event, Language, Status, TicketType, Ticket, FlatDto, SectorDto, Payment, Gender, Customer, CustomerAddress, CustomerCard, Booking, Cart, sequelize }; 
