@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    "build": "echo 'No build script necessary for this project'"
+    "build": "echo 'No build script necessary for this project'",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
